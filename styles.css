@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url(images/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 150vh;
+}
+.media {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+.media-box {
+    width: min(800px, calc(100vw - 24px));
+    height: auto;
+    aspect-ratio: 16 / 9;
+    box-sizing: border-box;
+    border: 2px transparent rgb(255, 223, 61);
+    border-radius: 8px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+    
+}
+.preview {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+.button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: transparent;
+    border: none;
+    padding: 0;
+    clip-path: circle(50%);
+}
+.button img {
+    width: 70px;
+    height: 70px;
+}
+.query-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 20;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffdf3d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.episode-menu {
+    position: absolute;
+    top: 56px;
+    right: 12px;
+    z-index: 30;
+    display: grid;
+    gap: 6px;
+    width: min(220px, calc(100% - 24px));
+    max-height: calc(100% - 68px);
+    overflow-y: auto;
+    padding: 19px;
+    box-sizing: border-box;
+    color: #1b7fb9;
+    text-align: left;
+    background: #ffdf3d;
+    border: 1px solid #c1abab;
+    border-radius: 6px;
+    box-shadow: 1px 4px 14px rgba(2, 2, 2, 0.25);
+}
+.episode-menu[hidden] {
+    display: none;
+}
+.episode-menu-title {
+    margin: 0 0 4px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+.episode-option {
+    padding: 8px 10px;
+    text-align: left;
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.episode-option:hover,
+.episode-option:focus-visible {
+    background: #4690b0;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    body {
+        min-height: 100vh;
+        background-attachment: scroll;
+    }
+
+    .media-box {
+        margin: 16px auto;
+    }
+
+    .button img {
+        width: 56px;
+        height: 56px;
+    }
+
+    .query-button {
+        top: 8px;
+        right: 8px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .episode-menu {
+        top: 48px;
+        right: 8px;
+        width: min(220px, calc(100% - 16px));
+        max-height: calc(100% - 56px);
+        padding: 12px;
+    }
+}

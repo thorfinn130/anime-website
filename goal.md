@@ -1,13 +1,1 @@
-make a anime website 
--lets u login with anilist
--adds  customizable profile and stuff and total watchlist
--easy  access to comment, supported gifs and images
--multiple themees
--scchedules
--many servers
--watch history
--notifications
--add to watchlist finished unfinished and multiple tags
--watchtogether
--searchbar  and filter
--custom lists
+simple sbr only - website
